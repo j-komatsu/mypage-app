@@ -1,0 +1,128 @@
+.App {
+  font-family: "Arial", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px; /* 全体の幅を調整 */
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;      /* 縦方向の中央揃え */
+  justify-content: center;  /* 横方向の中央揃え */
+  gap: 8px;                 /* アイコンとテキストの間隔 */
+  background-color: #f4f4f4; /* 明るい背景色 */
+  border: 2px solid #007bff; /* ボーダー色を青に変更 */
+  padding: 8px 16px; /* ボタンの内側余白を広げる */
+  cursor: pointer;
+  border-radius: 8px; /* ボタンを丸く */
+  font-size: 16px; /* テキストのサイズ */
+  font-weight: bold; /* テキストの太さ */
+  color: #007bff; /* テキストの色 */
+  transition: all 0.3s ease; /* ホバー時のスムーズな変化 */
+  width: 70px; /* 固定幅（必要なら削除） */
+  height: 40px; /* 固定高さ（必要なら削除） */
+}
+
+.google-button:hover {
+  background-color: #cedff0; /* ホバー時の背景色 */
+  color: white; /* ホバー時のテキスト色 */
+}
+
+.google-icon {
+  width: 30px;              /* アイコンの幅 */
+  height: 30px;             /* アイコンの高さ */
+}
+
+/* セクションのグリッドレイアウト */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動で列を調整 */
+  gap: 20px; /* 各セクション間のスペース */
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .section-grid {
+    grid-template-columns: 1fr; /* モバイルでは1列表示 */
+  }
+
+  .section {
+    height: auto; /* セクションの高さを自動調整 */
+  }
+}
+
+/* ブラウザ全体のスクロールバーを非表示 */
+body {
+  overflow: hidden; /* 縦横スクロールを無効化 */
+  margin: 0; /* デフォルトのマージンを削除 */
+  padding: 0; /* デフォルトのパディングを削除 */
+  height: 100vh; /* ブラウザの高さにフィット */
+}
+
+html {
+  overflow: hidden; /* スクロールバーを無効化 */
+  height: 100%; /* 全体の高さを固定 */
+}
+
+.navigation-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  width: 80px;         /* 固定幅 */
+  height: 20px;         /* 固定高さ */
+  line-height: 20px;      /* 縦方向の中央揃え */
+  text-align: center;     /* 横方向の中央揃え */
+}
+
+.navigation-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* データ管理のフッター */
+.data-management {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row; /* 横並びに変更 */
+  align-items: center;
+  gap: 8px; /* ボタン間の空白 */
+}
+
+.data-management button {
+  padding: 10px 8px;
+  font-size: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.data-management button:hover {
+  background-color: #0056b3;
+}
+

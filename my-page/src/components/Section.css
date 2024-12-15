@@ -1,0 +1,253 @@
+/* セクション全体のスタイル */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横3列に配置 */
+  grid-template-rows: repeat(2, auto); /* 縦2行に配置 */
+  grid-gap: 20px; /* セクション間のスペース */
+  padding: 20px;
+}
+
+.section {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* セクション見出しのラベルスタイル */
+.section-header h2 {
+  background-color: #4169e1; /* ブルー系の背景色 */
+  color: white; /* 白い文字色 */
+  padding: 5px 10px; /* ラベルの内側余白 */
+  border-radius: 5px; /* 角を丸くする */
+  display: inline-block; /* ラベルをインラインブロックにする */
+  margin: 0; /* 上下の余白を削除 */
+  font-size: 18px; /* 見出しのフォントサイズ */
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* リンクリスト内の各行スタイル */
+li {
+  display: flex;
+  justify-content: flex-start; /* 左寄せに変更 */
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* リンクのスタイル */
+li a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  flex: 1;
+  text-align: left; /* 左寄せ */
+}
+
+/* 削除ボタンのスタイル */
+li button {
+  margin-left: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #ff7875;
+}
+
+/* 追加リンクボタンのスタイル */
+.add-link-button {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-link-button:hover {
+  background-color: #0056b3;
+}
+
+/* タイトル編集ボタンのスタイル */
+.edit-title-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.edit-title-button:hover {
+  background-color: #0056b3;
+}
+
+/* ポップアップ共通スタイル */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* ポップアップボタン配置 */
+.popup-buttons {
+  display: flex;
+  justify-content: center; /* ボタンを中央に配置 */
+  gap: 8px; /* ボタン間の間隔を空白2個分に調整 */
+  margin-top: 10px; /* ボタンの上に余白を追加 */
+}
+
+/* ヘッダーのスタイル */
+.App-header h1 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive; /* ポップで柔らかいフォント */
+  font-size: 2.5em; /* 大きめのフォントサイズ */
+  color: #4169e1; /* 柔らかい青系の色 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 軽い影で立体感 */
+  margin: 0; /* 不要な余白を削除 */
+  padding: 20px 0; /* 上下の余白を調整 */
+  text-align: center; /* 中央揃え */
+}
+
+/* ナビゲーションリンクの配置スタイル */
+.navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* リンク間の間隔 */
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #4169e1; /* 青系カラー */
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #4169e1;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.navigation-link:hover {
+  background-color: #4169e1;
+  color: #ffffff;
+}
+
+/* Googleボタンのスタイル */
+.google-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ボタンの共通スタイル */
+.edit-title-button,
+.edit-section-button {
+background-color: #cce5ff; /* 少し薄い青 */
+color: #004085; /* 青系の文字色 */
+border: 1px solid #b8daff; /* 薄い青のボーダー */
+border-radius: 5px;
+padding: 5px 10px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.edit-title-button:hover,
+.edit-section-button:hover {
+background-color: #b8daff; /* ホバー時に少し濃い青 */
+border-color: #a1c9f5; /* ホバー時のボーダー */
+color: #003765; /* ホバー時の文字色 */
+}
+
+/* タイトル編集ボタン（鉛筆マーク） */
+.edit-title-button {
+  background-color: transparent; /* 背景を透明に */
+  border: none; /* ボーダーを非表示 */
+  color: #007bff; /* 青系の色 */
+  font-size: 1.2em; /* サイズ調整 */
+  cursor: pointer;
+}
+
+.edit-title-button:hover {
+  color: #0056b3; /* ホバー時に少し濃い青 */
+}
+
+/* ページタイトル編集コンテナ */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* タイトルと編集ボタンの間隔 */
+}
+
+/* ページタイトル編集用の入力フィールド */
+.edit-title-input {
+  font-size: 1.5em;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 15px; /* テキストエリアと保存ボタンの間にスペースを追加 */
+}
+
+/* ページタイトル保存ボタン */
+.save-title-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.save-title-button:hover {
+  background-color: #45a049;
+}
+
+
+/* リンク編集ボタンのスタイル */
+.edit-link-button {
+background-color: #007bff;
+color: white;
+border: none;
+border-radius: 3px;
+padding: 5px;
+cursor: pointer;
+margin-right: 5px;
+}
+
+.edit-link-button:hover {
+background-color: #0056b3;
+}
