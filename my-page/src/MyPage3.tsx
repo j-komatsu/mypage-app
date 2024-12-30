@@ -4,15 +4,25 @@ import "./App.css";
 import GoogleIcon from "./assets/google_icon.png";
 import { Link } from "react-router-dom";
 
-const MyPage2: React.FC = () => {
+const MyPage3: React.FC = () => {
   const [pageTitle, setPageTitle] = useState("My Page 3");
   const [isEditingTitle, setEditingTitle] = useState(false);
+  const [pageTitles, setPageTitles] = useState({
+    mypage2: "My Page 2",
+    mypage4: "My Page 4",
+    mypage5: "My Page 5",
+  });
 
   useEffect(() => {
     const storedTitle = localStorage.getItem("mypage3_title");
     if (storedTitle) {
       setPageTitle(storedTitle);
     }
+
+    const title2 = localStorage.getItem("mypage2_title") || "My Page 2";
+    const title4 = localStorage.getItem("mypage4_title") || "My Page 4";
+    const title5 = localStorage.getItem("mypage5_title") || "My Page 5";
+    setPageTitles({ mypage2: title2, mypage4: title4, mypage5: title5 });
   }, []);
 
   const savePageTitle = () => {
@@ -66,7 +76,7 @@ const MyPage2: React.FC = () => {
         <div className="title-container">
           {!isEditingTitle ? (
             <>
-              <h1>{pageTitle}</h1>
+              <h1 style={{ fontSize: "1.5rem" }}>{pageTitle}</h1>
               <button
                 className="edit-title-button"
                 onClick={() => setEditingTitle(true)}
@@ -93,13 +103,13 @@ const MyPage2: React.FC = () => {
             My Page
           </Link>
           <Link to="/mypage2" className="navigation-link">
-            My Page 
+            {pageTitles.mypage2}
           </Link>
           <Link to="/mypage4" className="navigation-link">
-            My Page 4
+            {pageTitles.mypage4}
           </Link>
           <Link to="/mypage5" className="navigation-link">
-            My Page 5
+            {pageTitles.mypage5}
           </Link>
           <Link to="/task-manager" className="navigation-link">タスク管理</Link>
           <Link to="/memo-manager" className="navigation-link">メモ帳</Link>
@@ -147,4 +157,4 @@ const MyPage2: React.FC = () => {
   );
 };
 
-export default MyPage2;
+export default MyPage3;

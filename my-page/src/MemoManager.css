@@ -139,6 +139,30 @@ img {
   margin-bottom: 15px;            /* 下に余白を追加 */
 }
 
+/* メモ一覧の項目スタイル */
+.memo-list li {
+  font-size: 14px;         /* メモタイトルの文字サイズを小さく */
+  color: #333;
+  margin: 1px 0;           /* 上下の余白を狭く */
+  padding: 1px 8px;        /* 内側の余白を調整 */
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* メモ項目のテキスト強調 */
+.memo-list li strong {
+  font-size: 12px;         /* タイトルの文字サイズ */
+  font-weight: bold;
+}
+
+/* ホバー時の効果 */
+.memo-list li:hover {
+  background: #ffebf4;
+}
+
 /* メモエディタのスタイル */
 .memo-editor {
   flex: 1;                /* メモエディタが残りの幅を使用 */

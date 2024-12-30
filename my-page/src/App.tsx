@@ -6,6 +6,12 @@ import GoogleIcon from "./assets/google_icon.png"; // アイコン画像のイ�
 
 const App = () => {
   const [sections, setSections] = useState<string[]>([]);
+  const [pageTitles, setPageTitles] = useState({
+    mypage2: "My Page 2",
+    mypage3: "My Page 3",
+    mypage4: "My Page 4",
+    mypage5: "My Page 5",
+  });
 
   // 初期化時にローカルストレージからセクションデータを取得
   useEffect(() => {
@@ -17,6 +23,12 @@ const App = () => {
     } else {
       setSections(storedSections);
     }
+
+    const title2 = localStorage.getItem("mypage2_title") || "My Page 2";
+    const title3 = localStorage.getItem("mypage3_title") || "My Page 3";
+    const title4 = localStorage.getItem("mypage4_title") || "My Page 4";
+    const title5 = localStorage.getItem("mypage5_title") || "My Page 5";
+    setPageTitles({ mypage2: title2, mypage3: title3, mypage4: title4, mypage5: title5 });
   }, []);
 
   useEffect(() => {
@@ -63,16 +75,15 @@ const App = () => {
     event.target.value = "";
   };
 
-
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My Page</h1>
+        <h1 style={{ fontSize: "2rem" }}>My Page</h1>
         <div className="navigation-links">
-          <Link to="/mypage2" className="navigation-link">My Page 2</Link>
-          <Link to="/mypage3" className="navigation-link">My Page 3</Link>
-          <Link to="/mypage4" className="navigation-link">My Page 4</Link>
-          <Link to="/mypage5" className="navigation-link">My Page 5</Link>
+          <Link to="/mypage2" className="navigation-link">{pageTitles.mypage2}</Link>
+          <Link to="/mypage3" className="navigation-link">{pageTitles.mypage3}</Link>
+          <Link to="/mypage4" className="navigation-link">{pageTitles.mypage4}</Link>
+          <Link to="/mypage5" className="navigation-link">{pageTitles.mypage5}</Link>
           <Link to="/task-manager" className="navigation-link">タスク管理</Link>
           <Link to="/memo-manager" className="navigation-link">メモ帳</Link>
         </div>
