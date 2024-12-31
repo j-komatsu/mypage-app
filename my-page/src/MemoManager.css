@@ -335,3 +335,12 @@ textarea {
   cursor: grab;
 }
 
+/* 選択中のメモ項目のスタイル */
+.memo-list li.selected-memo {
+  background-color: #ffebf4; /* 明るいピンクの背景色 */
+  border: 2px solid #ff4b9d; /* 強調されたボーダー */
+  font-weight: bold; /* 太字 */
+  color: #ff007f; /* 鮮やかな文字色 */
+  transform: scale(1.05); /* 軽く拡大 */
+  transition: all 0.3s ease; /* スムーズな変化 */
+}

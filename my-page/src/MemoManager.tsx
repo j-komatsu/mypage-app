@@ -73,8 +73,12 @@ const MemoManager: React.FC = () => {
           <h2>メモ一覧</h2>
           <ul>
             {memos.map((memo) => (
-              <li key={memo.id} onClick={() => handleSelectMemo(memo)}>
-                <strong>{memo.title}</strong> {/* タイトルクリックで選択 */}
+              <li
+                key={memo.id}
+                className={editingMemo?.id === memo.id ? "selected-memo" : ""}
+                onClick={() => handleSelectMemo(memo)}
+              >
+                <strong>{memo.title}</strong>
               </li>
             ))}
           </ul>
