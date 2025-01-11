@@ -86,18 +86,13 @@ const App = () => {
           <Link to="/mypage5" className="navigation-link">{pageTitles.mypage5}</Link>
           <Link to="/task-manager" className="navigation-link">タスク管理</Link>
           <Link to="/memo-manager" className="navigation-link">メモ帳</Link>
+          <a href="https://www.google.com"
+            className="navigation-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            Google
+          </a>
         </div>
-        {/* Google ボタンの追加 */}
-        <button
-          className="google-button"
-          onClick={() => window.open("https://www.google.com", "_blank")}
-        >
-          <img
-            src={GoogleIcon}  // アイコンの画像パス
-            alt="Google Icon"
-            className="google-icon"
-          />
-        </button>
       </header>
       <main className="section-grid">
         {sections.map((title, index) => (
@@ -117,12 +112,13 @@ const App = () => {
             accept=".json"
             style={{ display: "none" }}
             onChange={importData}
-          />　
+          />
+          　
           <button
             className="small-button"
             onClick={() => document.getElementById("importFile")?.click()}
           >
-            インポート
+          インポート
           </button>
         </div>
       </footer>

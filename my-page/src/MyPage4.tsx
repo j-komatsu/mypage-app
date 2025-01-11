@@ -113,18 +113,14 @@ const MyPage4: React.FC = () => {
           </Link>
           <Link to="/task-manager" className="navigation-link">タスク管理</Link>
           <Link to="/memo-manager" className="navigation-link">メモ帳</Link>
+          <a href="https://www.google.com"
+            className="navigation-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            Google
+          </a>
         </div>
-        {/* Google ボタンの追加 */}
-        <button
-          className="google-button"
-          onClick={() => window.open("https://www.google.com", "_blank")}
-        >
-          <img
-            src={GoogleIcon}  // アイコンの画像パス
-            alt="Google Icon"
-            className="google-icon"
-          />
-        </button>
+
       </header>
       <main className="section-grid">
         {Array.from({ length: 6 }, (_, index) => (

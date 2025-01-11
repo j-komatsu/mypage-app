@@ -16,34 +16,6 @@ h1 {
   font-size: 24px;
 }
 
-.google-button {
-  display: flex;
-  align-items: center;      /* 縦方向の中央揃え */
-  justify-content: center;  /* 横方向の中央揃え */
-  gap: 8px;                 /* アイコンとテキストの間隔 */
-  background-color: #f4f4f4; /* 明るい背景色 */
-  border: 2px solid #007bff; /* ボーダー色を青に変更 */
-  padding: 1px 1px; /* ボタンの内側余白を広げる */
-  cursor: pointer;
-  border-radius: 8px; /* ボタンを丸く */
-  font-size: 16px; /* テキストのサイズ */
-  font-weight: bold; /* テキストの太さ */
-  color: #007bff; /* テキストの色 */
-  transition: all 0.3s ease; /* ホバー時のスムーズな変化 */
-  width: 80px; /* 固定幅（必要なら削除） */
-  height: 50px; /* 固定高さ（必要なら削除） */
-}
-
-.google-button:hover {
-  background-color: #cedff0; /* ホバー時の背景色 */
-  color: white; /* ホバー時のテキスト色 */
-}
-
-.google-icon {
-  width: 50px;              /* アイコンの幅 */
-  height: 32px;             /* アイコンの高さ */
-}
-
 /* セクションのグリッドレイアウト */
 .section-grid {
   display: grid;
@@ -85,12 +57,12 @@ html {
 .navigation-link {
   text-decoration: none;
   color: #007bff;
-  font-size: 15px;
+  font-size: 12px;
   padding: 5px 10px;
   border: 1px solid #007bff;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
-  width: 110px;         /* 固定幅 */
+  width: 90px;         /* 固定幅 */
   height: 20px;         /* 固定高さ */
   line-height: 20px;      /* 縦方向の中央揃え */
   text-align: center;     /* 横方向の中央揃え */

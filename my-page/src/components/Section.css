@@ -67,8 +67,8 @@ li button {
   background-color: #ff4d4f;
   color: white;
   border: none;
-  border-radius: 3px;
-  padding: 5px 10px;
+  border-radius: 5px;
+  padding: 2px 10px;
   cursor: pointer;
 }
 
@@ -92,6 +92,16 @@ li button:hover {
 }
 
 /* タイトル編集ボタンのスタイル */
+/* セクションタイトル編集ボタンをデフォルトで非表示 */
+.section-header .edit-title-button {
+  display: none; /* 基本非表示 */
+}
+
+/* セクション全体にカーソルがある場合に表示 */
+.section:hover .section-header .edit-title-button {
+  display: inline-block;
+}
+
 .edit-title-button {
   background-color: #007bff;
   color: white;
@@ -160,18 +170,6 @@ li button:hover {
 .navigation-link:hover {
   background-color: #4169e1;
   color: #ffffff;
-}
-
-/* Googleボタンのスタイル */
-.google-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.google-icon {
-  width: 24px;
-  height: 24px;
 }
 
 /* ボタンの共通スタイル */
@@ -243,11 +241,28 @@ background-color: #007bff;
 color: white;
 border: none;
 border-radius: 3px;
-padding: 5px;
+padding: 2px 5px;
 cursor: pointer;
 margin-right: 5px;
 }
 
 .edit-link-button:hover {
 background-color: #0056b3;
+}
+
+li .edit-link-button,
+li button {
+  display: none; /* 基本非表示 */
+}
+
+/* セクション全体にカーソルがある場合に表示 */
+.section:hover li .edit-link-button,
+.section:hover li button {
+  display: inline-block;
+}
+
+/* 個別リンクにカーソルがある場合に表示 */
+li:hover .edit-link-button,
+li:hover button {
+  display: inline-block;
 }
